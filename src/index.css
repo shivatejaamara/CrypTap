@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* CrypTap Color Palette */
+    --background: 210 45% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 32% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 32% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Midnight Blue Primary */
+    --primary: 210 66% 12%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Neon Green Secondary */
+    --secondary: 160 100% 50%;
+    --secondary-foreground: 210 45% 8%;
+
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 15% 65%;
+
+    /* Royal Purple Accent */
+    --accent: 250 60% 67%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 250 60% 67%;
+
+    /* CrypTap Custom Colors */
+    --cryptap-midnight: 210 66% 12%;
+    --cryptap-neon: 160 100% 50%;
+    --cryptap-purple: 250 60% 67%;
+    --cryptap-dark: 210 45% 8%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--cryptap-midnight)), hsl(var(--cryptap-purple)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--cryptap-neon)), hsl(var(--cryptap-purple)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--cryptap-dark)), hsl(var(--cryptap-midnight)));
+    
+    /* Animations */
+    --glow-neon: 0 0 20px hsl(var(--cryptap-neon) / 0.5);
+    --glow-purple: 0 0 20px hsl(var(--cryptap-purple) / 0.5);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 210 45% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 45% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 45% 8%;
+
+    --primary: 210 66% 12%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 160 100% 50%;
+    --secondary-foreground: 210 45% 8%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 250 60% 67%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 250 60% 67%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
